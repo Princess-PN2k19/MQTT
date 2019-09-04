@@ -9,6 +9,10 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <style>
+	body {
+		margin: 1%;
+		background-color: #d9d9d9
+	}
 	.header h1 {
 		float: none;
     	display: block;
@@ -27,8 +31,25 @@
 	.card-header {
 		background-color: #ffb3b3;
 	}
+	button {
+		background-color: #ffb3b3;
+	}
+	#subscribe {
+		background-color: #ffe6e6;
+		width: 100%
+	}
+	#publish {
+		background-color: #ffe6e6;
+		width: 100%
+	}
+	#SubHistory {
+		border: 2px solid black;
+	}
+	#PubHistory {
+		border: 2px solid black;
+	}
 </style>
-<body style="margin: 1%; background-color: #d9d9d9">
+<body>
 	<div class="header">
 	  <h1>MQTT Over Websocket</h1>
 	</div>
@@ -47,16 +68,16 @@
 						<input type="text" class="form-control" id="status">
 					</div>
 					<div class="col-sm-6">
-						<button id="btn-connect" type="button" style="background-color: #ffb3b3;">Connect</button>
-						<button id="btn-disconnect" type="button" style="background-color: #ffb3b3;">Disconnect</button>
+						<button id="btn-connect" type="button">Connect</button>
+						<button id="btn-disconnect" type="button">Disconnect</button>
 					</div>
 				</form>
 			</div>
 		</div>
 
-				<div id="subscribe" class="container" class="card" style="background-color: #ffe6e6; width: 100%">
+		<div id="subscribe" class="container" class="card">
 			<center>
-				<h2 class="card-header" style="background-color: #ffb3b3;">Subscribe</h2>
+				<h2 class="card-header">Subscribe</h2>
 			</center>
 			<div class="card-body">
 				<form>
@@ -65,9 +86,8 @@
 						<input type="text" class="form-control" id="sub-topic">
 					</div>
 					<div class="col-sm-6">
-						<button id="btn-subscribe" type="button" style="background-color: #ffb3b3;">Subscribe</button>
-						<button id="btn-unsubscribe" type="button"
-							style="background-color: #ffb3b3;">Unsubscribe</button>
+						<button id="btn-subscribe" type="button">Subscribe</button>
+						<button id="btn-unsubscribe" type="button">Unsubscribe</button>
 					</div>
 				</form>
 
@@ -75,9 +95,9 @@
 		</div>
 
 
-		<div id="publish" class="container" class="card" style="background-color: #ffe6e6; width: 100%">
+		<div id="publish" class="container" class="card">
 			<center>
-				<h2 class="card-header" style="background-color: #ffb3b3;">Publish</h2>
+				<h2 class="card-header">Publish</h2>
 			</center>
 			<div class="card-body">
 				<form>
@@ -88,13 +108,13 @@
 						<input type="text" class="form-control" id="payload">
 					</div>
 					<div class="col-sm-6">
-						<button id="btn-publish" type="button" style="background-color: #ffb3b3;">Publish</button>
+						<button id="btn-publish" type="button">Publish</button>
 					</div>
 				</form>
 			</div>
 		</div>
 		<br>
-		<div class="col-md-12" style="border: 2px solid black">
+		<div id="PubHistory" class="col-md-12">
 			<div class="row">
 				<div class="col-md-12" style="color:black; text-align: center; height: 40px; background-color: #ffb3b3">
 					<h4>Publication History</h4>
@@ -115,7 +135,7 @@
 			</div>
 		</div>
 		<br>
-		<div class="col-md-12" style="border: 2px solid black">
+		<div id="SubHistory" class="col-md-12">
 			<div class="row">
 				<div class="col-md-12" style="color:black; text-align: center; height: 40px; background-color: #ffb3b3">
 					<h4>Subscription History</h4>
