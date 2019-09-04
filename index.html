@@ -1,5 +1,4 @@
 <html>
-
 <head>
 	<title>PJ's MOWS</title>
 	<meta charset="utf-8">
@@ -47,6 +46,36 @@
 	}
 	#PubHistory {
 		border: 2px solid black;
+	}
+	#PubSubTbl {
+		color:black;
+		text-align: center;
+		height: 40px;
+		background-color: #ffb3b3;
+	}
+	#pubSubDiv {
+		height:200px;
+	}
+	#th1 {
+		width:20%;
+	}
+	#th2 {
+		width:35%;
+	}
+	#th3 {
+		width:45%;
+	}
+	#subTh1 {
+		width:40%;
+	}
+	#subTh2 {
+		width:60%;
+	}
+	#tblDiv {
+		height:200px;
+		margin-left: 5%;
+		float: left;
+		width: 50%;
 	}
 </style>
 <body>
@@ -116,17 +145,17 @@
 		<br>
 		<div id="PubHistory" class="col-md-12">
 			<div class="row">
-				<div class="col-md-12" style="color:black; text-align: center; height: 40px; background-color: #ffb3b3">
+				<div id="PubsubTbl" class="col-md-12">
 					<h4>Publication History</h4>
 				</div>
 			</div>
-			<div class="row overflow-auto" style="height:200px">
+			<div id="pubSubDiv" class="row overflow-auto">
 				<table class="col-md-12" class="table table-bordered" class="table table-hover">
 					<thead>
 						<tr>
-							<th style="width:20%;" scope="col">Topic</th>
-							<th style="width: 35%;" scope="col">Payload</th>
-							<th style="width:45%;" scope="col">Time Stamp</th>
+							<th id="th1" scope="col">Topic</th>
+							<th id="th2" scope="col">Payload</th>
+							<th id="th3" scope="col">Time Stamp</th>
 						</tr>
 					</thead>
 					<tbody id="tBodyPub">
@@ -137,16 +166,16 @@
 		<br>
 		<div id="SubHistory" class="col-md-12">
 			<div class="row">
-				<div class="col-md-12" style="color:black; text-align: center; height: 40px; background-color: #ffb3b3">
+				<div id="PubSubTbl" class="col-md-12">
 					<h4>Subscription History</h4>
 				</div>
 			</div>
-			<div class="row overflow-auto" style="height:200px">
+			<div id="pubSubDiv" class="row overflow-auto">
 				<table class="col-md-12" class="table table-bordered" class="table table-hover">
 					<thead>
 						<tr>
-							<th style="width:40%;" scope="col">Topic</th>
-							<th style="width:60%;" scope="col">Time Stamp</th>
+							<th id="subTh1" scope="col">Topic</th>
+							<th id="subTh2" scope="col">Time Stamp</th>
 						</tr>
 					</thead>
 					<tbody id="tBodySub">
@@ -156,13 +185,13 @@
 		</div>
 	</div>
 	
-	<div class="row overflow-auto" style="height:200px; margin-left: 5%; float: left; width: 50%">
+	<div id="tblDiv" class="row overflow-auto">
 		<table class="table table-bordered" class="table table-hover">
 			<thead>
 				<tr>
-					<th class="danger" style="width:20%;" scope="col">Topic</th>
-					<th class="danger" style="width:45%;" scope="col">Payload</th>
-					<th class="danger" style="width:35%;" scope="col">Time Stamp</th>
+					<th id="th1" class="danger" scope="col">Topic</th>
+					<th id="th2" class="danger" scope="col">Payload</th>
+					<th id="th3" class="danger" scope="col">Time Stamp</th>
 				</tr>
 			</thead>
 			<tbody id="tBody">
