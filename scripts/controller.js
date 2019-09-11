@@ -66,8 +66,8 @@ clickConnect.addEventListener('click', function () {
 		tdTopic.style.fontSize = "11px";
 		tdPayload.style.fontSize = "11px";
 		tdTimeStamp.style.fontSize = "11px";
-		tdTopic.appendChild(document.createTextNode(publishTopic.value));
-		tdPayload.appendChild(document.createTextNode(payload));
+		tdTopic.appendChild(document.createTextNode(topic);
+		tdPayload.appendChild(document.createTextNode(payload);
 		tdTimeStamp.appendChild(document.createTextNode(timeStamp));
 		tr.appendChild(tdTopic);
 		tr.appendChild(tdPayload);
