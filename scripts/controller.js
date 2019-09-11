@@ -4,7 +4,7 @@ var clickConnect = document.getElementById('btn-connect');
 var clickDisconnect = document.getElementById("btn-disconnect");
 var Status = document.getElementById("status");
 var publishTopic = document.getElementById('pub-topic');
-var payload = document.getElementById('payload');
+var pubPayload = document.getElementById('payload');
 var clickPublish = document.getElementById('btn-publish');
 var inputSubscribe = document.getElementById('sub-topic');
 var clickSubscribe = document.getElementById('btn-subscribe');
@@ -24,7 +24,7 @@ clickConnect.addEventListener('click', function () {
 
 	
 	clickPublish.addEventListener('click', function () {
-		client.publish(publishTopic.value, payload.value);
+		client.publish(publishTopic.value, pubPayload.value);
 		timeStamp = new Date();
 		var trPublish = document.createElement("tr");
 		var tdTopicPublish = document.createElement("td");
@@ -34,7 +34,7 @@ clickConnect.addEventListener('click', function () {
 		tdPayloadPublish.style.fontSize = '11px';
 		tdTimeStampPublish.style.fontSize = '11px';
 		tdTopicPublish.appendChild(document.createTextNode(publishTopic.value));
-		tdPayloadPublish.appendChild(document.createTextNode(payload.value));
+		tdPayloadPublish.appendChild(document.createTextNode(pubPayload.value));
 		tdTimeStampPublish.appendChild(document.createTextNode(timeStamp));
 		trPublish.appendChild(tdTopicPublish);
 		trPublish.appendChild(tdPayloadPublish);
