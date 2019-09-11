@@ -24,7 +24,7 @@ clickConnect.addEventListener('click', function () {
 
 	
 	clickPublish.addEventListener('click', function () {
-		client.publish(publishTopic.value, "PJ: " + payload.value);
+		client.publish(publishTopic.value, payload.value);
 		timeStamp = new Date();
 		var trPublish = document.createElement("tr");
 		var tdTopicPublish = document.createElement("td");
